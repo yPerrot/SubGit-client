@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SubGit | Dowload only part of a github repo</title>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style/css/main.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <nav>
+        <span>SubGit</span>
+        <div class="nav-links">
+            <a href="https://github.com/yPerrot/">My Github</a>
+        </div>
+    </nav>
+    <main>
+        <h1>Dowload only folders of Git repos</h1>
+        
+        <p>
+            Tired of downloading a big useless git repos when you only need a small folder in it?
+            <br> 
+            Use <span class="site-name">SubGit</span> to download only the folder you want, for free, with a single click! 
+        </p>
+
+        <form action="http://localhost:3000/download" method="get">
+            <input type="text" name="link" id="link" placeholder="https://github.com/...">
+            <button type="submit">Dowload</button>
+        </form>
+        
+        <div class="availability">
+            <p>You can submite links from following source code hosts</p>
+            <div class="availability-list">
+                <div class="availability-item">
+                    <img src="assets/github.png" alt="GitHub logo"  title="GitHub - Available">
+                    <p>GitHub</p>
+                </div>
+                <div class="availability-item not-available">
+                    <img src="assets/gitlab.png" alt="GitLab logo" title="GitLab - Not available">
+                    <p>GitLab</p>
+                </div>
+                <div class="availability-item not-available">
+                    <img src="assets/bitbucket.png" alt="Bitbucket logo" title="BitBucket - Not available">
+                    <p>Bitbucket</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

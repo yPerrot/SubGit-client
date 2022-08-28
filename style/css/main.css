@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(143, 100, 238);
+  --primary-color-oppacity: rgb(143, 100, 238, 0.9);
+  --font-color: #080808;
+}
+
+body {
+  background: url(../../assets/bg-gradient_large.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  color: var(--font-color);
+  padding: 2rem 0;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem 2rem;
+}
+@media (max-width: 640px) {
+  nav {
+    padding: 0 2rem 2rem;
+  }
+}
+nav > span {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+}
+nav .nav-links {
+  margin-left: auto;
+}
+nav .nav-links > a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+  box-shadow: 0px 0px 10px 0px var(--primary-color-oppacity);
+  transition: transform 0.3s;
+  outline: none;
+}
+nav .nav-links > a:hover {
+  transform: scale(1.15);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: clamp(300px, 70vw, 850px);
+}
+main > h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+main > p {
+  text-align: justify;
+  font-size: 1.125rem;
+  padding: 0 2rem;
+}
+main > form {
+  margin: 3rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 4rem;
+}
+main > form > input {
+  width: min(100%, 25rem);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5rem 1rem;
+  outline: none;
+  transition: transform 0.3s;
+  border: 1px solid lightgray;
+}
+main > form > input:focus {
+  border-color: white;
+  box-shadow: 0px 0px 30px 0px var(--primary-color-oppacity);
+  transform: scale(1.05);
+}
+main > form > input::-moz-placeholder {
+  font-family: "Raleway", sans-serif;
+  text-overflow: ellipsis;
+}
+main > form > input:-ms-input-placeholder {
+  font-family: "Raleway", sans-serif;
+  text-overflow: ellipsis;
+}
+main > form > input::placeholder {
+  font-family: "Raleway", sans-serif;
+  text-overflow: ellipsis;
+}
+main > form > button {
+  margin-top: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+  box-shadow: 0px 0px 10px 0px var(--primary-color-oppacity);
+  transition: transform 0.3s;
+  padding: 0.5rem 4rem;
+}
+main > form > button:hover {
+  transform: scale(1.05);
+}
+
+.availability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.availability > p {
+  margin-bottom: 0.5rem;
+}
+.availability-list {
+  display: flex;
+  gap: 2.5rem;
+}
+.availability-item {
+  text-align: center;
+}
+.availability-item > p {
+  font-size: 0.875rem;
+}
+.availability img {
+  height: 48px;
+  margin-bottom: 4px;
+}
+.availability .not-available img, .availability .not-available p {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.site-name {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.25rem;
+}
+
+.modal {
+  max-width: 50ch;
+}
+.modal > * {
+  margin: 0 0 0.5rem 0;
+}
+
+.modal::-webkit-backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}/*# sourceMappingURL=main.css.map */
