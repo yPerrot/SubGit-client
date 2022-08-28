@@ -159,7 +159,7 @@ body {
   font-size: 1.25rem;
 }
 
-#modal {
+.dialog {
   margin: auto;
   width: min(500px, 90vw);
   padding: 1.5rem;
@@ -167,39 +167,39 @@ body {
   border-radius: 16px;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
-#modal #modal::-webkit-backdrop {
+.dialog::-webkit-backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
-#modal #modal::backdrop {
+.dialog::backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
-#modal > header {
+.dialog > header {
   display: flex;
 }
-#modal > header > button {
+.dialog > header > button {
   margin-left: auto;
   background-color: inherit;
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
 }
-#modal > main {
+.dialog > main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
 }
-#modal > main > p {
+.dialog > main > p {
   margin: 2rem 0;
 }
-#modal .loader {
+.dialog .loader {
   width: 150px;
   height: 150px;
   display: inline-block;
   padding: 0px;
   text-align: left;
 }
-#modal .loader span {
+.dialog .loader > span {
   position: absolute;
   display: inline-block;
   width: 150px;
@@ -209,11 +209,11 @@ body {
   -webkit-animation: loader 1.5s linear infinite;
           animation: loader 1.5s linear infinite;
 }
-#modal .loader span:nth-child(2) {
+.dialog .loader > span:nth-child(2) {
   -webkit-animation-delay: -0.45s;
           animation-delay: -0.45s;
 }
-#modal .loader span:last-child {
+.dialog .loader > span:nth-child(3) {
   -webkit-animation-delay: -0.9s;
           animation-delay: -0.9s;
 }
@@ -236,4 +236,14 @@ body {
     transform: scale(1, 1);
     opacity: 0;
   }
+}
+
+#TMP {
+  font-size: 10rem;
+  color: hsl(0deg, 90%, 50%);
+}
+
+#TMP2 {
+  font-size: 10rem;
+  color: hsl(120deg, 90%, 25%);
 }/*# sourceMappingURL=main.css.map */

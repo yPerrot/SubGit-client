@@ -55,10 +55,10 @@
     </main>
 
     <!-- Loadgin Dialog -->
-    <dialog id="modal">
+    <dialog id="loading-dialog" class="dialog">
         <header>
             <h2>Dowloading ...</h2>
-            <button id="close-modal-btn">
+            <button class="close-modal-btn">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </header>
@@ -74,7 +74,47 @@
             </div>
         </main>
 
-      </dialog>
+    </dialog>
+
+    <dialog id="failed-dialog" class="dialog">
+        <header>
+            <h2>Dowload failed</h2>
+            <button class="close-modal-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+      
+        <main>
+            <p style="text-align: center;">
+                Oops, the download failed 😕 
+                <br>
+                You should check the link
+            </p>
+            <i class="fa-solid fa-x" id="TMP"></i>
+        </main>
+
+    </dialog>
+
+    <dialog id="success-dialog" class="dialog">
+        <header>
+            <h2>Dowload completed</h2>
+            <button class="close-modal-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+      
+        <main>
+
+            <p style="text-align: center;">
+                Yeah, download completed 🎉
+                <br>
+                You can now save th zip file
+            </p>
+
+            <i class="fa-solid fa-check" id="TMP2"></i>
+        </main>
+
+    </dialog>
     
 </body>
 </html>

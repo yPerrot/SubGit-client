@@ -208,7 +208,7 @@ body {
 }
 
 
-#modal {
+.dialog {
     margin: auto;
     width: min(500px, 90vw);
 
@@ -218,7 +218,7 @@ body {
     border-radius: 16px;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
   
-    #modal::backdrop {
+    &::backdrop {
         background: rgb(0 0 0 / 0.4);
     }
 
@@ -253,24 +253,24 @@ body {
         display:inline-block;
         padding:0px;
         text-align:left;
-    }
-    
-    .loader span {
-        position:absolute;
-        display:inline-block;
-        width:150px;
-        height:150px;
-        border-radius:100%;
-        background:rgb(143, 100, 238);
-        animation:loader 1.5s linear infinite;
-    }
-    
-    .loader span:nth-child(2) {
-        animation-delay:-0.45s;
-    }
-    
-    .loader span:last-child {
-        animation-delay:-0.9s;
+
+        & > span {
+            position:absolute;
+            display:inline-block;
+            width:150px;
+            height:150px;
+            border-radius:100%;
+            background:rgb(143, 100, 238);
+            animation:loader 1.5s linear infinite;
+
+            &:nth-child(2) {
+                animation-delay:-0.45s;
+            }
+
+            &:nth-child(3) {
+                animation-delay:-0.9s;
+            }
+        }
     }
     
     @keyframes loader {
@@ -284,4 +284,15 @@ body {
         opacity:0;
         }
     }
+}
+
+
+#TMP {
+    font-size: 10rem;
+    color: hsl(0, 90%, 50%);
+}
+
+#TMP2 {
+    font-size: 10rem;
+    color: hsl(120, 90%, 25%);
 }
