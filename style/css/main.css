@@ -12,7 +12,7 @@
 }
 
 body {
-  background: url(../../assets/bg-gradient_large.jpg);
+  background: url(../../assets/images/bg-gradient_large.jpg);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -23,25 +23,25 @@ body {
   padding: 2rem 0;
 }
 
-nav {
+.main-header {
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 4rem 2rem;
 }
 @media (max-width: 640px) {
-  nav {
+  .main-header {
     padding: 0 2rem 2rem;
   }
 }
-nav > span {
+.main-header > span {
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
 }
-nav .nav-links {
+.main-header .nav-links {
   margin-left: auto;
 }
-nav .nav-links > a {
+.main-header .nav-links > a {
   display: inline-block;
   padding: 0.5rem 1rem;
   color: white;
@@ -52,11 +52,11 @@ nav .nav-links > a {
   transition: transform 0.3s;
   outline: none;
 }
-nav .nav-links > a:hover {
+.main-header .nav-links > a:hover {
   transform: scale(1.15);
 }
 
-main {
+.content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -65,16 +65,16 @@ main {
   text-align: center;
   width: clamp(300px, 70vw, 850px);
 }
-main > h1 {
+.content > h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
-main > p {
+.content > p {
   text-align: justify;
   font-size: 1.125rem;
   padding: 0 2rem;
 }
-main > form {
+.content > #form {
   margin: 3rem 0 4rem;
   display: flex;
   flex-direction: column;
@@ -82,7 +82,7 @@ main > form {
   width: 100%;
   padding: 0 4rem;
 }
-main > form > input {
+.content > #form > input {
   width: min(100%, 25rem);
   font-family: "Raleway", sans-serif;
   font-size: 1.125rem;
@@ -93,24 +93,24 @@ main > form > input {
   transition: transform 0.3s;
   border: 1px solid lightgray;
 }
-main > form > input:focus {
+.content > #form > input:hover, .content > #form > input:focus {
   border-color: white;
   box-shadow: 0px 0px 30px 0px var(--primary-color-oppacity);
   transform: scale(1.05);
 }
-main > form > input::-moz-placeholder {
+.content > #form > input::-moz-placeholder {
   font-family: "Raleway", sans-serif;
   text-overflow: ellipsis;
 }
-main > form > input:-ms-input-placeholder {
+.content > #form > input:-ms-input-placeholder {
   font-family: "Raleway", sans-serif;
   text-overflow: ellipsis;
 }
-main > form > input::placeholder {
+.content > #form > input::placeholder {
   font-family: "Raleway", sans-serif;
   text-overflow: ellipsis;
 }
-main > form > button {
+.content > #form > button {
   margin-top: 1.5rem;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
@@ -123,7 +123,7 @@ main > form > button {
   transition: transform 0.3s;
   padding: 0.5rem 4rem;
 }
-main > form > button:hover {
+.content > #form > button:hover {
   transform: scale(1.05);
 }
 
@@ -159,17 +159,81 @@ main > form > button:hover {
   font-size: 1.25rem;
 }
 
-.modal {
-  max-width: 50ch;
+#modal {
+  margin: auto;
+  width: min(500px, 90vw);
+  padding: 1.5rem;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
-.modal > * {
-  margin: 0 0 0.5rem 0;
-}
-
-.modal::-webkit-backdrop {
+#modal #modal::-webkit-backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
-
-.modal::backdrop {
+#modal #modal::backdrop {
   background: rgba(0, 0, 0, 0.4);
+}
+#modal > header {
+  display: flex;
+}
+#modal > header > button {
+  margin-left: auto;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+#modal > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+#modal > main > p {
+  margin: 2rem 0;
+}
+#modal .loader {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  padding: 0px;
+  text-align: left;
+}
+#modal .loader span {
+  position: absolute;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background: rgb(143, 100, 238);
+  -webkit-animation: loader 1.5s linear infinite;
+          animation: loader 1.5s linear infinite;
+}
+#modal .loader span:nth-child(2) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+#modal .loader span:last-child {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

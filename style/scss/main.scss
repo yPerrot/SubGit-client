@@ -16,7 +16,7 @@
 }
 
 body {
-    background: url(../../assets/bg-gradient_large.jpg);
+    background: url(../../assets/images/bg-gradient_large.jpg);
     background-size: cover; 
 
     // background: linear-gradient(to bottom right, #fcf0f9, #f2ebfb, #86ddf8);
@@ -34,7 +34,7 @@ body {
     padding: 2rem 0;
 }
 
-nav {
+.main-header {
     width: 100%;
 
     display: flex;
@@ -79,8 +79,7 @@ nav {
     }
 }
 
-main {
-    // height: 100%;
+.content {
     flex-grow:1;
     display: flex;
     flex-direction: column;
@@ -102,7 +101,7 @@ main {
         padding: 0 2rem;
     }
     
-    & > form {
+    & > #form {
         margin: 3rem 0 4rem;
         
         display: flex;
@@ -130,6 +129,7 @@ main {
             border: 1px solid lightgray
         }
         
+        & > input:hover,
         & > input:focus {
             border-color: white;
             box-shadow: 0px 0px 30px 0px var(--primary-color-oppacity); 
@@ -205,4 +205,83 @@ main {
 .site-name {
     font-family: 'Roboto Slab', serif;
     font-size: 1.25rem;
+}
+
+
+#modal {
+    margin: auto;
+    width: min(500px, 90vw);
+
+    padding: 1.5rem;
+
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  
+    #modal::backdrop {
+        background: rgb(0 0 0 / 0.4);
+    }
+
+    & > header {
+        display: flex;
+
+        & > button {
+            margin-left: auto;
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+    }
+
+    & > main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-bottom: 1rem;
+
+        & > p {
+            margin: 2rem 0;
+        }
+
+    }
+
+    .loader {
+        width:150px;
+        height:150px;
+        display:inline-block;
+        padding:0px;
+        text-align:left;
+    }
+    
+    .loader span {
+        position:absolute;
+        display:inline-block;
+        width:150px;
+        height:150px;
+        border-radius:100%;
+        background:rgb(143, 100, 238);
+        animation:loader 1.5s linear infinite;
+    }
+    
+    .loader span:nth-child(2) {
+        animation-delay:-0.45s;
+    }
+    
+    .loader span:last-child {
+        animation-delay:-0.9s;
+    }
+    
+    @keyframes loader {
+        0% {
+        transform: scale(0, 0);
+        opacity:0.8;
+        }
+    
+        100% {
+        transform: scale(1, 1);
+        opacity:0;
+        }
+    }
 }
