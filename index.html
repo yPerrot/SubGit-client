@@ -76,6 +76,7 @@
 
     </dialog>
 
+    <!-- Request Failed Dialog -->
     <dialog id="failed-dialog" class="dialog">
         <header>
             <h2>Dowload failed</h2>
@@ -85,16 +86,17 @@
         </header>
       
         <main>
-            <p style="text-align: center;">
+            <p>
                 Oops, the download failed 😕 
                 <br>
                 You should check the link
             </p>
-            <i class="fa-solid fa-x" id="TMP"></i>
+            <i class="fa-solid fa-x logo logo-fail"></i>
         </main>
 
     </dialog>
 
+    <!-- Request Success Dialog -->
     <dialog id="success-dialog" class="dialog">
         <header>
             <h2>Dowload completed</h2>
@@ -105,13 +107,13 @@
       
         <main>
 
-            <p style="text-align: center;">
+            <p>
                 Yeah, download completed 🎉
                 <br>
                 You can now save th zip file
             </p>
 
-            <i class="fa-solid fa-check" id="TMP2"></i>
+            <i class="fa-solid fa-check logo logo-success"></i>
         </main>
 
     </dialog>

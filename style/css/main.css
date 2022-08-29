@@ -165,13 +165,6 @@ body {
   padding: 1.5rem;
   border: none;
   border-radius: 16px;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
-}
-.dialog::-webkit-backdrop {
-  background: rgba(0, 0, 0, 0.4);
-}
-.dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
 }
 .dialog > header {
   display: flex;
@@ -191,6 +184,16 @@ body {
 }
 .dialog > main > p {
   margin: 2rem 0;
+  text-align: center;
+}
+.dialog > main .logo {
+  font-size: 10rem;
+}
+.dialog > main .logo-fail {
+  color: hsl(0deg, 90%, 50%);
+}
+.dialog > main .logo-success {
+  color: hsl(120deg, 90%, 25%);
 }
 .dialog .loader {
   width: 150px;
