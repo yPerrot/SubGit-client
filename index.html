@@ -1,123 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dowload only part of a github repo">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dowload only part of a github repo" />
+
     <title>SubGit | Dowload only part of a github repo</title>
-    
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="style/css/main.css">
-    <link rel="stylesheet" href="./assets/fontawesome-6.1.2/css/all.min.css">
-    <script src="index.js" defer></script>
-</head>
-<body>
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="style/css/main.css" />
+    <link rel="stylesheet" href="./assets/fontawesome-6.1.2/css/all.min.css" />
+    <script type="module" src="index.js" defer></script>
+  </head>
+  <body>
     <header class="main-header">
-        <span>SubGit</span>
-        <div class="nav-links">
-            <a href="https://github.com/yPerrot/">My Github</a>
-        </div>
+      <span>SubGit</span>
+      <div class="nav-links">
+        <a href="https://github.com/yPerrot/">My Github</a>
+      </div>
     </header>
 
     <main class="content">
-        <h1>Dowload only folders of Git repos</h1>
-        
-        <p>
-            Tired of downloading a big useless git repos when you only need a small folder in it?
-            <br> 
-            Use <span class="site-name">SubGit</span> to download only the folder you want, for free, with a single click! 
-        </p>
+      <h1>Dowload only folders of Git repos</h1>
 
-        <form id="form">
-            <input type="text" name="link" id="link" placeholder="https://github.com/..." required >
-            <!-- <input type="text" name="link" id="link" placeholder="https://github.com/..." required pattern="\d*" > -->
-            <button type="submit" id="download-btn">Dowload</button>
-        </form>
-        
-        <div class="availability">
-            <p>You can submite links from following source code hosts</p>
-            <div class="availability-list">
-                <div class="availability-item">
-                    <img src="assets/images/github.png" alt="GitHub logo"  title="GitHub - Available" width="48" height="48">
-                    <p>GitHub</p>
-                </div>
-                <div class="availability-item not-available">
-                    <img src="assets/images/gitlab.png" alt="GitLab logo" title="GitLab - Not available" width="48" height="48">
-                    <p>GitLab</p>
-                </div>
-                <div class="availability-item not-available">
-                    <img src="assets/images/bitbucket.png" alt="Bitbucket logo" title="BitBucket - Not available" width="48" height="48">
-                    <p>Bitbucket</p>
-                </div>
-            </div>
+      <p>
+        Tired of downloading a big useless git repos when you only need a small
+        folder in it?
+        <br />
+        Use <span class="site-name">SubGit</span> to download only the folder
+        you want, for free, with a single click!
+      </p>
+
+      <form id="form">
+        <input
+          type="text"
+          name="link"
+          id="link"
+          placeholder="https://github.com/..."
+          required
+        />
+        <!-- <input type="text" name="link" id="link" placeholder="https://github.com/..." required pattern="\d*" > -->
+        <button type="submit" id="download-btn">Dowload</button>
+      </form>
+
+      <div class="availability">
+        <p>You can submite links from following source code hosts</p>
+        <div class="availability-list">
+          <div class="availability-item">
+            <img
+              src="assets/images/github.png"
+              alt="GitHub logo"
+              title="GitHub - Available"
+              width="48"
+              height="48"
+            />
+            <p>GitHub</p>
+          </div>
+          <div class="availability-item not-available">
+            <img
+              src="assets/images/gitlab.png"
+              alt="GitLab logo"
+              title="GitLab - Not available"
+              width="48"
+              height="48"
+            />
+            <p>GitLab</p>
+          </div>
+          <div class="availability-item not-available">
+            <img
+              src="assets/images/bitbucket.png"
+              alt="Bitbucket logo"
+              title="BitBucket - Not available"
+              width="48"
+              height="48"
+            />
+            <p>Bitbucket</p>
+          </div>
         </div>
+      </div>
     </main>
 
     <!-- Loadgin Dialog -->
     <dialog id="loading-dialog" class="dialog">
-        <header>
-            <h2>Dowloading ...</h2>
-            <button class="close-modal-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </header>
-      
-        <main>
+      <header>
+        <h2>Dowloading ...</h2>
+        <button class="close-modal-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
 
-            <p>Your file is comming! Just wait a minute ...</p>
+      <main>
+        <p>Your file is comming! Just wait a minute ...</p>
 
-            <div class="loader">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </main>
-
+        <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </main>
     </dialog>
 
     <!-- Request Failed Dialog -->
     <dialog id="failed-dialog" class="dialog">
-        <header>
-            <h2>Dowload failed</h2>
-            <button class="close-modal-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </header>
-      
-        <main>
-            <p>
-                Oops, the download failed 😕 
-                <br>
-                You should check the link
-            </p>
-            <i class="fa-solid fa-x logo logo-fail"></i>
-        </main>
+      <header>
+        <h2>Dowload failed</h2>
+        <button class="close-modal-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
 
+      <main>
+        <p>
+          Oops, the download failed 😕
+          <br />
+          You should check the link
+        </p>
+        <i class="fa-solid fa-x logo logo-fail"></i>
+      </main>
     </dialog>
 
     <!-- Request Success Dialog -->
     <dialog id="success-dialog" class="dialog">
-        <header>
-            <h2>Dowload completed</h2>
-            <button class="close-modal-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </header>
-      
-        <main>
+      <header>
+        <h2>Dowload completed</h2>
+        <button class="close-modal-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
 
-            <p>
-                Yeah, download completed 🎉
-                <br>
-                You can now save th zip file
-            </p>
+      <main>
+        <p>
+          Yeah, download completed 🎉
+          <br />
+          You can now save th zip file
+        </p>
 
-            <i class="fa-solid fa-check logo logo-success"></i>
-        </main>
-
+        <i class="fa-solid fa-check logo logo-success"></i>
+      </main>
     </dialog>
-    
-</body>
+  </body>
 </html>

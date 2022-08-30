@@ -1,299 +1,295 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary-color: rgb(139, 21, 183);
-    --primary-color-oppacity: rgb(139, 21, 183, 0.9);
+  --primary-color: rgb(139, 21, 183);
+  --primary-color-oppacity: rgb(139, 21, 183, 0.9);
 
-    --font-color: #080808;
+  --font-color: #080808;
 }
 
 body {
-    background: url(../../assets/images/bg-gradient_large.jpg);
-    background-size: cover; 
+  background: url(../../assets/images/bg-gradient_large.jpg);
+  background-size: cover;
 
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    font-family: 'Raleway', sans-serif;
-    color: var(--font-color);
+  font-family: "Raleway", sans-serif;
+  color: var(--font-color);
 
-    padding: 2rem 0;
+  padding: 2rem 0;
 }
 
 .main-header {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    padding: 0 4rem 2rem;
-    
-    @media (max-width: 640px) {
-        padding: 0 2rem 2rem;
-    }
+  padding: 0 4rem 2rem;
 
+  @media (max-width: 640px) {
+    padding: 0 2rem 2rem;
+  }
 
-    & > span {
-        font-family: 'Roboto Slab', serif;
-        font-size: 2rem;
-    }
+  & > span {
+    font-family: "Roboto Slab", serif;
+    font-size: 2rem;
+  }
 
-    .nav-links {
-        margin-left: auto;
-    }
+  .nav-links {
+    margin-left: auto;
+  }
 
-    .nav-links > a {
-        display: inline-block;
+  .nav-links > a {
+    display: inline-block;
 
-        padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
 
-        color: white;
-        text-decoration: none;
+    color: white;
+    text-decoration: none;
 
-        background-color: var(--primary-color);
-        border-radius: 9999px;
-        box-shadow: 0px 0px 10px 0px var(--primary-color-oppacity);
+    background-color: var(--primary-color);
+    border-radius: 9999px;
+    box-shadow: 0px 0px 10px 0px var(--primary-color-oppacity);
 
-        transition: transform .3s; 
+    transition: transform 0.3s;
 
-        outline: none;
-    }
+    outline: none;
+  }
 
-    .nav-links > a:hover {
-        transform: scale(1.15);
-    }
+  .nav-links > a:hover {
+    transform: scale(1.15);
+  }
 }
 
 .content {
-    flex-grow:1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  width: clamp(300px, 70vw, 850px);
+
+  & > h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & > p {
+    text-align: justify;
+    font-size: 1.125rem;
+    padding: 0 2rem;
+  }
+
+  & > #form {
+    margin: 3rem 0 4rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    text-align: center;
+    width: 100%;
 
-    width: clamp(300px, 70vw, 850px);
+    padding: 0 4rem;
 
-    & > h1 {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
+    & > input {
+      width: min(100%, 25rem);
+
+      font-family: "Raleway", sans-serif;
+      font-size: 1.125rem;
+
+      border-radius: 9999px;
+      border: none;
+      padding: 0.5rem 1rem;
+
+      outline: none;
+
+      transition: transform 0.3s;
+
+      border: 1px solid lightgray;
     }
 
-    & > p {
-        text-align: justify;
-        font-size: 1.125rem;
-        padding: 0 2rem;
+    & > input:hover,
+    & > input:focus {
+      border-color: white;
+      box-shadow: 0px 0px 30px 0px var(--primary-color-oppacity);
+      transform: scale(1.05);
     }
-    
-    & > #form {
-        margin: 3rem 0 4rem;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        width: 100%;
-
-        padding: 0 4rem;
-
-        & > input {
-            width: min(100%, 25rem);
-
-            font-family: 'Raleway', sans-serif;
-            font-size: 1.125rem;
-
-            border-radius: 9999px;
-            border: none;
-            padding: 0.5rem 1rem;
-            
-            outline: none;
-            
-            transition: transform .3s; 
-
-            border: 1px solid lightgray
-        }
-        
-        & > input:hover,
-        & > input:focus {
-            border-color: white;
-            box-shadow: 0px 0px 30px 0px var(--primary-color-oppacity); 
-            transform: scale(1.05);
-
-        }
-
-        & > input::placeholder {
-            font-family: 'Raleway', sans-serif;
-            text-overflow: ellipsis;
-        }
-        
-        & > button {
-            margin-top: 1.5rem;
-            
-
-            font-family: 'Raleway', sans-serif;
-            font-size: 1.5rem;
-
-            color: white;
-
-            border: none;
-            cursor: pointer;
-
-            background-color: var(--primary-color);
-            border-radius: 9999px;
-            box-shadow: 0px 0px 10px 0px var(--primary-color-oppacity);
-    
-            transition: transform .3s; 
-
-            padding: 0.5rem 4rem;
-        }
-    
-        & > button:hover {
-            transform: scale(1.05);
-        }
+    & > input::placeholder {
+      font-family: "Raleway", sans-serif;
+      text-overflow: ellipsis;
     }
+
+    & > button {
+      margin-top: 1.5rem;
+
+      font-family: "Raleway", sans-serif;
+      font-size: 1.5rem;
+
+      color: white;
+
+      border: none;
+      cursor: pointer;
+
+      background-color: var(--primary-color);
+      border-radius: 9999px;
+      box-shadow: 0px 0px 10px 0px var(--primary-color-oppacity);
+
+      transition: transform 0.3s;
+
+      padding: 0.5rem 4rem;
+    }
+
+    & > button:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .availability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > p {
+    margin-bottom: 0.5rem;
+  }
+
+  &-list {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &-item {
+    text-align: center;
+
+    & > p {
+      font-size: 0.875rem;
+    }
+  }
+
+  & img {
+    height: 48px;
+    margin-bottom: 4px;
+  }
+
+  & .not-available img,
+  & .not-available p {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+}
+
+.site-name {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.25rem;
+}
+
+.dialog {
+  margin: auto;
+  width: min(500px, 90vw);
+
+  padding: 1.5rem;
+
+  border: none;
+  border-radius: 16px;
+
+  & > header {
+    display: flex;
+
+    & > button {
+      margin-left: auto;
+      background-color: inherit;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
+
+  & > main {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    padding-bottom: 1rem;
+
     & > p {
-        margin-bottom: 0.5rem;
+      margin: 2rem 0;
+      text-align: center;
     }
 
-    &-list {
-        display: flex;
-        gap: 2.5rem;
+    & .logo {
+      font-size: 10rem;
     }
 
-    &-item {
-        text-align: center;
-
-        & > p {
-            font-size: 0.875rem;
-        }
+    & .logo-fail {
+      color: hsl(0, 90%, 50%);
     }
 
-    & img {
-        height: 48px;
-        margin-bottom: 4px;
+    & .logo-success {
+      color: hsl(120, 90%, 25%);
     }
-    
-    & .not-available img, & .not-available p {
-        filter: grayscale(100%);
-        opacity: 0.5;
+  }
+
+  .loader {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    padding: 0px;
+    text-align: left;
+
+    & > span {
+      position: absolute;
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      background: rgb(143, 100, 238);
+      animation: loader 1.5s linear infinite;
+
+      &:nth-child(2) {
+        animation-delay: -0.45s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: -0.9s;
+      }
     }
+  }
+
+  @keyframes loader {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
 }
-
-.site-name {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.25rem;
-}
-
-
-.dialog {
-    margin: auto;
-    width: min(500px, 90vw);
-
-    padding: 1.5rem;
-
-    border: none;
-    border-radius: 16px;
-
-    & > header {
-        display: flex;
-
-        & > button {
-            margin-left: auto;
-            background-color: inherit;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-    }
-
-    & > main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        padding-bottom: 1rem;
-
-        & > p {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        & .logo {
-            font-size: 10rem;
-        }
-
-        & .logo-fail {
-            color: hsl(0, 90%, 50%);
-        }
-
-        & .logo-success {
-            color: hsl(120, 90%, 25%);
-        }
-    }
-
-    .loader {
-        width:150px;
-        height:150px;
-        display:inline-block;
-        padding:0px;
-        text-align:left;
-
-        & > span {
-            position:absolute;
-            display:inline-block;
-            width:150px;
-            height:150px;
-            border-radius:100%;
-            background:rgb(143, 100, 238);
-            animation:loader 1.5s linear infinite;
-
-            &:nth-child(2) {
-                animation-delay:-0.45s;
-            }
-
-            &:nth-child(3) {
-                animation-delay:-0.9s;
-            }
-        }
-    }
-    
-    @keyframes loader {
-        0% {
-            transform: scale(0, 0);
-            opacity:0.8;
-        }
-    
-        100% {
-            transform: scale(1, 1);
-            opacity:0;
-        }
-    }
-}
-
 
 #TMP {
-    font-size: 10rem;
-    color: hsl(0, 90%, 50%);
+  font-size: 10rem;
+  color: hsl(0, 90%, 50%);
 }
 
 #TMP2 {
-    font-size: 10rem;
-    color: hsl(120, 90%, 25%);
+  font-size: 10rem;
+  color: hsl(120, 90%, 25%);
 }
