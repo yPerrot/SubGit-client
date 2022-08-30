@@ -1,0 +1,17 @@
+{
+  "name": "subgit-client",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prettify": "prettier --write ."
+  },
+  "devDependencies": {
+    "vite": "^3.0.7",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0"
+  }
+}
