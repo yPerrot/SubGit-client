@@ -9,9 +9,9 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	e.stopPropagation();
 
-	const gitLink = form.elements['link'].value;
+	const gitURL = form.elements['url'].value;
 
-	fetch(`http://localhost:3000/download?link=${gitLink}`).then(async (response) => {
+	fetch(`https://subgit-server.fly.dev/download?url=${gitURL}`).then(async (response) => {
 		if (response.ok) {
 			successDialog.showModal();
 
@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
 
 			const link = document.createElement("a");
 			link.href = window.URL.createObjectURL(blobData);
-			link.download = gitLink.split('/').pop() + ".zip"
+			link.download = gitURL.split('/').pop() + ".zip"
 			document.body.appendChild(link); // Required for FF
 			link.click();
 		} else {
