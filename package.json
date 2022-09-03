@@ -1,0 +1,28 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prettify": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yPerrot/SubGit-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yPerrot/SubGit-client/issues"
+  },
+  "homepage": "https://github.com/yPerrot/SubGit-client#readme",
+  "devDependencies": {
+    "sass": "^1.54.8",
+    "serve": "^14.0.1",
+    "vite": "^3.0.9"
+  }
+}
