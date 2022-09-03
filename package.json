@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prettify": "prettier --write ."
+    "lint": "eslint --fix ./*.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/yPerrot/SubGit-client#readme",
   "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "sass": "^1.54.8",
     "serve": "^14.0.1",
     "vite": "^3.0.9"
