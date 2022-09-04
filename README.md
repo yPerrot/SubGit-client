@@ -7,7 +7,7 @@ The client side of the [SubGit website](https://subgit.netlify.app/).
 ## Run
 
 ```sh
-cd client
+cd subgit-client
 npm i 
 npm run dev
 ```
@@ -15,6 +15,6 @@ npm run dev
 ## Technos & Tools
 
  - HTML
- - JavaScript
  - SCSS
+ - JavaScript
  - ViteJS
