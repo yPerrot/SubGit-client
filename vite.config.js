@@ -1,3 +1,3 @@
-export default {
-    base: '/SubGit-client/',
-};
+// export default defineConfig({
+//     base: './', // Path relative to project root
+// });
