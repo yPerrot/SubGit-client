@@ -30,7 +30,7 @@
             Use <span class="site-name">SubGit</span> to download only the folder you want, for free, with a single click! 
         </p>
 
-        <form id="form">
+        <form class="form js-form">
             <input type="text" name="url" id="url" placeholder="https://github.com/..." required >
             <!-- <input type="text" name="url" id="url" placeholder="https://github.com/..." required pattern="\d*" > -->
             <button type="submit" id="download-btn">Dowload</button>
@@ -57,14 +57,14 @@
 
     <!-- Loadgin Dialog -->
     <dialog id="loading-dialog" class="dialog">
-        <header>
+        <header class="dialog-header">
             <h2>Dowloading ...</h2>
-            <button class="close-modal-btn">
+            <button class="close-dialog-btn js-close-dialog-btn">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </header>
       
-        <main>
+        <main class="dialog-content">
 
             <p>Your file is comming! Just wait a minute ...</p>
 
@@ -79,14 +79,14 @@
 
     <!-- Request Failed Dialog -->
     <dialog id="failed-dialog" class="dialog">
-        <header>
+        <header class="dialog-header">
             <h2>Dowload failed</h2>
-            <button class="close-modal-btn">
+            <button class="close-dialog-btn js-close-dialog-btn">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </header>
       
-        <main>
+        <main class="dialog-content">
             <p>
                 Oops, the download failed 😕 
                 <br>
@@ -99,14 +99,14 @@
 
     <!-- Request Success Dialog -->
     <dialog id="success-dialog" class="dialog">
-        <header>
+        <header class="dialog-header">
             <h2>Dowload completed</h2>
-            <button class="close-modal-btn">
+            <button class="close-dialog-btn js-close-dialog-btn">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </header>
       
-        <main>
+        <main class="dialog-content">
 
             <p>
                 Yeah, download completed 🎉

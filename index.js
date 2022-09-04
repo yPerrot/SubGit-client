@@ -2,14 +2,15 @@ const loadingDialog = document.querySelector('#loading-dialog');
 const failedDialog = document.querySelector('#failed-dialog');
 const successDialog = document.querySelector('#success-dialog');
 
-const closeModalBtn = document.querySelectorAll('.close-modal-btn');
-const form = document.querySelector('#form');
+const closeDialogBtn = document.querySelectorAll('.js-close-dialog-btn');
+const form = document.querySelector('.js-form');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     e.stopPropagation();
 
     const gitURL = form.elements.url.value;
+    form.elements.url.value = '';
 
     fetch(`https://subgit-server.fly.dev/download?url=${gitURL}`).then(async (response) => {
         if (response.ok) {
@@ -35,7 +36,7 @@ form.addEventListener('submit', (e) => {
     loadingDialog.showModal();
 });
 
-closeModalBtn.forEach((btn) => {
+closeDialogBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
         if (loadingDialog.open) loadingDialog.close();
         if (failedDialog.open) failedDialog.close();
